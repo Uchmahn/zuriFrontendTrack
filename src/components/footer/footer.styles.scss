@@ -1,0 +1,35 @@
+.footer-container {
+  height: 16rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 96%;
+  bottom: 0;
+  margin-top: 6.4rem;
+
+  .footer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 1.2rem;
+    align-items: center;
+    border-top: 0.2rem solid #d1d4daa2;
+    padding-top: 1.8rem;
+  }
+
+  .footer-item {
+    p {
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+      text-align: center;
+      font-weight: 400;
+      color: #667085;
+    }
+  }
+
+  .ing-logo {
+    width: 21.7rem;
+  }
+}

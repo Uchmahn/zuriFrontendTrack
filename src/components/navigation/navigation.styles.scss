@@ -1,0 +1,42 @@
+.nav-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 4.5rem;
+  padding-bottom: 16.2rem;
+
+  .nav {
+    display: flex;
+    width: 85.7%;
+    justify-content: space-between;
+
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 4.8rem;
+
+      .nav-link {
+        text-decoration: none;
+        color: #000;
+        cursor: pointer;
+        font-size: 2rem;
+        line-height: 2.5rem;
+      }
+    }
+
+    .connect-wallet {
+      padding: 1.3rem 2.5rem;
+    }
+  }
+}
+
+.btn {
+  border-radius: 1rem;
+  border: none;
+  background: linear-gradient(90deg, #a02279 11.45%, #a02279 11.45%);
+  color: #fff;
+  font-family: inherit;
+}

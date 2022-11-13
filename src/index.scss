@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+  /* outline: 4px dotted #e67e22; */
+  /* outline-offset: 8px; */
+  box-shadow: 0 0 0 0.2rem #ced5e2;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Red Rose', cursive;
+  background: #f4f5f7;
+  font-weight: 400;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 144rem;
+  height: auto;
+  margin: 0 auto;
+  gap: 6.4rem;
+  position: relative;
+}
+
+// Responsiveness
+
+//Below 710px
+@media (max-width: 44.5em) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  .footer-item {
+    align-self: flex-start;
+  }
+
+  .contact-container {
+    width: 0;
+    max-width: 100%;
+  }
+}
+
+// Below 480px
+@media (max-width: 30em) {
+  .links-container {
+    sub {
+      font-size: 0.8rem;
+    }
+  }
+
+  .profile-section {
+    .share-icon {
+      &.query {
+        display: none;
+      }
+
+      &.query2 {
+        display: flex;
+        right: 10%;
+      }
+    }
+  }
+
+  .name-container {
+    flex-direction: column;
+  }
+}
+
+// Below 375px
+@media (max-width: 23.5em) {
+  .app-container {
+    .contact-container {
+      margin: 2.4rem auto 2.4rem auto;
+      .header {
+        span {
+          font-size: 1.8rem;
+          line-height: 2.8rem;
+        }
+      }
+      .checkbox {
+        .checkbox-label-text {
+          line-height: 2.2rem;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  .links-container {
+    sub {
+      font-size: 0.5rem;
+      line-height: 1.4;
+    }
+  }
+
+  .profile-section {
+    .share-icon {
+      &.query2 {
+        display: flex;
+        right: 5%;
+      }
+    }
+  }
+}

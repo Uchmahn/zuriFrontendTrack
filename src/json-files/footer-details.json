@@ -1,0 +1,26 @@
+[
+  {
+    "heading": "Community",
+    "headingcl": "community",
+    "textOne": "NFT",
+    "textTwo": "Tokens",
+    "textThree": "Landlords",
+    "textFour": "Discord"
+  },
+  {
+    "heading": "Places",
+    "headingcl": "places",
+    "textOne": "Castle",
+    "textTwo": "Farms",
+    "textThree": "Beach",
+    "textFour": "Learn more"
+  },
+  {
+    "heading": "About us",
+    "headingcl": "aboutUs",
+    "textOne": "Road map",
+    "textTwo": "Creators",
+    "textThree": "Career",
+    "textFour": "Contact us"
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "text": "Zuri Team",
+    "href": "https://training.zuri.team/",
+    "id": "btn__zuri",
+    "subtext": "Join the Zuri team"
+  },
+  {
+    "text": "Zuri Books",
+    "href": "http://books.zuri.team",
+    "id": "books",
+    "subtext": "Check out all groundbreaking Zuri books handpicked for your tech growth"
+  },
+  {
+    "text": "Python Books",
+    "href": "https://books.zuri.team/python-for-beginners?ref_id=uchechukwuazubuine",
+    "id": "book__python",
+    "subtext": "Learn python the right way from scratch with Zuri Books"
+  },
+  {
+    "text": "Background Check for Coders",
+    "href": "https://background.zuri.team",
+    "id": "pitch",
+    "subtext": "Need to know about any coder's background? Leave that to the Zuri Team"
+  },
+  {
+    "text": "Design books",
+    "href": "https://books.zuri.team/design-rules",
+    "id": "book__design",
+    "subtext": "Check out the all new free design books offered by the Zuri Team "
+  }
+]
