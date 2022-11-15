@@ -1,0 +1,41 @@
+.discovery-container {
+  background: linear-gradient(90deg, #a02279 11.45%, #a02279 11.45%);
+
+  .discovery {
+    width: 85.7%;
+    margin: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .discovery-details {
+      display: flex;
+      flex-direction: column;
+      gap: 3.5rem;
+      color: #fff;
+
+      h3 {
+        font-size: 4.8rem;
+        font-weight: 700;
+      }
+
+      .discovery-text {
+        font-size: 1.8rem;
+        line-height: 3.5rem;
+        max-width: 41rem;
+      }
+
+      .learn-more {
+        background: linear-gradient(124.4deg, #ffffff 10.8%, #ffffff 87.34%);
+        color: #a02279;
+        width: 15.6rem;
+        height: 4.8rem;
+        border-radius: 0.8rem;
+      }
+
+      .learn-more:hover {
+        background: #ecd3e4;
+      }
+    }
+  }
+}

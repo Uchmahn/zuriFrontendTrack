@@ -1,19 +1,15 @@
 .hero-container {
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding-bottom: 6.4rem;
 
   .hero {
     width: 85.7%;
     display: flex;
-    gap: 9.5rem;
+    justify-content: space-between;
 
     .hero-details {
       display: flex;
       flex-direction: column;
-      width: 64.5rem;
+      max-width: 64.5rem;
       gap: 4.5rem;
 
       h1 {

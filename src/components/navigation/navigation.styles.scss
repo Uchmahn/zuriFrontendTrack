@@ -1,16 +1,20 @@
 .nav-container {
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding-top: 4.5rem;
   padding-bottom: 16.2rem;
+  align-items: center;
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    width: 85.7%;
+    align-items: center;
+  }
 
   .nav {
     display: flex;
-    width: 85.7%;
     justify-content: space-between;
+    align-items: center;
+    gap: 17rem;
 
     .nav-links {
       display: flex;
@@ -39,4 +43,26 @@
   background: linear-gradient(90deg, #a02279 11.45%, #a02279 11.45%);
   color: #fff;
   font-family: inherit;
+}
+
+.btn:hover {
+  background: #b34e94;
+}
+
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+
+  ion-icon {
+    height: 4.8rem;
+    width: 4.8rem;
+    color: #333;
+    color: #a02279;
+  }
+
+  ion-icon[name='close-outline'] {
+    display: none;
+  }
 }

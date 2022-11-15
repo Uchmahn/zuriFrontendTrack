@@ -8,17 +8,19 @@
   outline: none;
   /* outline: 4px dotted #e67e22; */
   /* outline-offset: 8px; */
-  box-shadow: 0 0 0 0.2rem #ced5e2;
+  box-shadow: 0 0 0 0.2rem #e3bdd7;
 }
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
   font-family: 'Red Rose', cursive;
   background: #f4f5f7;
   font-weight: 400;
+  overflow-x: hidden;
 }
 
 .app-container {
@@ -27,89 +29,643 @@ body {
   max-width: 144rem;
   height: auto;
   margin: 0 auto;
-  gap: 6.4rem;
+  // gap: 6.4rem;
   position: relative;
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 // Responsiveness
 
-//Below 710px
-@media (max-width: 44.5em) {
-  .footer {
+// Below 1340px
+@media (max-width: 83.8em) {
+  .hero {
+    // flex-direction: column;
+    // gap: 3.6rem;
+    // align-items: center;
+
+    .hero-photo {
+      width: 33.5rem;
+      height: 40.5rem;
+    }
+  }
+
+  .discovery {
+    // flex-direction: column;
+    // align-items: center;
+    // gap: 3.6rem;
+    .discovery-photo {
+      width: 50rem;
+    }
+  }
+
+  .app-container {
+    .nav-container {
+      .nav {
+        gap: 10rem;
+      }
+    }
+
+    .card {
+      //   width: 29rem;
+      // height: 37rem;
+      width: 24rem;
+      height: 32rem;
+
+      .vacancy {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+//Below 1155px
+@media (max-width: 72.2em) {
+  .hero {
+    flex-direction: column;
+    gap: 3.6rem;
+    align-items: center;
+
+    .hero-photo {
+      width: 47rem;
+      height: 45rem;
+    }
+  }
+
+  .discovery {
     flex-direction: column;
     align-items: center;
-    gap: 1.2rem;
-  }
+    gap: 3.6rem;
 
-  .footer-item {
-    align-self: flex-start;
-  }
-
-  .contact-container {
-    width: 0;
-    max-width: 100%;
-  }
-}
-
-// Below 480px
-@media (max-width: 30em) {
-  .links-container {
-    sub {
-      font-size: 0.8rem;
+    .discovery-photo {
+      width: 70rem;
     }
   }
 
-  .profile-section {
-    .share-icon {
-      &.query {
+  #additional-info-col {
+    gap: 15rem;
+  }
+
+  .app-container {
+    .cards-container {
+      justify-content: center;
+    }
+
+    .nav-container {
+      .nav {
+        gap: 6.5rem;
+      }
+    }
+  }
+}
+
+//Below 1120px
+@media (max-width: 70em) {
+  .app-container {
+    .btn-mobile-nav {
+      display: block;
+    }
+
+    .nav-open {
+      ion-icon[name='close-outline'] {
+        display: block;
+      }
+      ion-icon[name='menu-outline'] {
         display: none;
       }
-
-      &.query2 {
-        display: flex;
-        right: 10%;
-      }
     }
   }
 
-  .name-container {
-    flex-direction: column;
+  .nav-container {
+    header {
+      // position: relative;
+
+      .nav {
+        background-color: rgba(255, 255, 255, 0.95);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        transform: translateX(100%);
+
+        justify-content: center;
+        flex-direction: column;
+        font-size: 3rem;
+        transition: all 0.5s ease-in;
+
+        opacity: 0;
+
+        pointer-events: none;
+
+        visibility: hidden;
+
+        .connect-wallet {
+          font-size: 3rem;
+        }
+
+        .nav-links {
+          flex-direction: column;
+
+          .nav-link {
+            font-size: 3rem;
+          }
+        }
+      }
+    }
+    .nav-open {
+      .nav {
+        opacity: 1;
+        pointer-events: auto;
+        visibility: visible;
+        transform: translateX(0);
+      }
+    }
   }
 }
 
-// Below 375px
-@media (max-width: 23.5em) {
+// Below 1040px
+@media (max-width: 65em) {
   .app-container {
-    .contact-container {
-      margin: 2.4rem auto 2.4rem auto;
-      .header {
-        span {
-          font-size: 1.8rem;
-          line-height: 2.8rem;
-        }
-      }
-      .checkbox {
-        .checkbox-label-text {
-          line-height: 2.2rem;
-          font-size: 1.5rem;
+    .place-to-stay--container {
+      .place-to-stay {
+        .category-bar {
+          .category-text {
+            font-size: 1.5rem;
+          }
+
+          .location-box {
+            span {
+              font-size: 1.5rem;
+            }
+          }
         }
       }
     }
-  }
 
-  .links-container {
-    sub {
-      font-size: 0.5rem;
-      line-height: 1.4;
+    .cards-container {
+      grid-template-columns: 1fr 1fr;
+      justify-items: center;
+      .card {
+        width: 29rem;
+        height: 37rem;
+
+        .vacancy {
+          font-size: 1.1rem;
+        }
+      }
     }
-  }
 
-  .profile-section {
-    .share-icon {
-      &.query2 {
-        display: flex;
-        right: 5%;
+    #additional-info-col {
+      gap: 8rem;
+    }
+
+    .nft-container {
+      .nft {
+        h2 {
+          font-size: 4rem;
+        }
       }
     }
   }
 }
+
+// Below 825px
+@media (max-width: 51.6em) {
+  .app-container {
+    .featured-logos {
+      width: 15rem;
+    }
+
+    #additional-info-col {
+      gap: 4rem;
+    }
+
+    .place-to-stay--container {
+      .place-to-stay {
+        .category-bar {
+          .category-text {
+            font-size: 1rem;
+          }
+
+          .location-box {
+            span {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Below 695px
+@media (max-width: 43.5em) {
+  .app-container {
+    .footer-meta-container {
+      .footer-meta {
+        flex-direction: column;
+        gap: 2.4rem;
+      }
+    }
+
+    .add-connect-wallet-window {
+      width: 90%;
+    }
+
+    #additional-info-col {
+      gap: 4rem;
+    }
+
+    .discovery {
+      .discovery-photo {
+        width: 50rem;
+      }
+    }
+
+    .hero-container {
+      .hero {
+        .hero-details {
+          h1 {
+            line-height: 5.6rem;
+            font-size: 4.8rem;
+          }
+
+          .search {
+            input {
+              padding-right: 10rem;
+            }
+          }
+        }
+
+        .hero-photo {
+          width: 43rem;
+          height: 41rem;
+        }
+      }
+    }
+
+    .featured-logos {
+      width: 12rem;
+    }
+
+    .cards-container {
+      .card {
+        //   width: 29rem;
+        // height: 37rem;
+        width: 24rem;
+        height: 32rem;
+
+        .vacancy {
+          font-size: 0.8rem;
+        }
+      }
+    }
+
+    .place-to-stay--container {
+      .place-to-stay {
+        .category-bar {
+          .category-text {
+            font-size: 0.8rem;
+          }
+
+          .location-box {
+            gap: 1.5rem;
+            padding: 0.8rem;
+
+            span {
+              font-size: 0.8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Below 510px
+@media (max-width: 31.9em) {
+  .app-container {
+    .cards-container {
+      .card {
+        //   width: 29rem;
+        // height: 37rem;
+        width: 22rem;
+        height: 30rem;
+
+        .vacancy {
+          font-size: 0.75rem;
+        }
+      }
+    }
+
+    .discovery {
+      .discovery-photo {
+        width: 42rem;
+      }
+    }
+
+    .hero-container {
+      .hero {
+        .hero-details {
+          .search {
+            input {
+              padding-right: 6rem;
+            }
+          }
+        }
+
+        .hero-photo {
+          width: 43rem;
+          height: 41rem;
+        }
+      }
+    }
+
+    .place-to-stay--container {
+      .place-to-stay {
+        .category-bar {
+          .category-text {
+            font-size: 0.6rem;
+          }
+
+          .location-box {
+            gap: 1.1rem;
+            padding: 0.4rem;
+
+            span {
+              font-size: 0.6rem;
+            }
+          }
+        }
+      }
+    }
+
+    .location-icon {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+}
+
+// Below 470px
+@media (max-width: 29.4em) {
+  .app-container {
+    .cards-container {
+      grid-template-columns: 1fr;
+      justify-items: center;
+      .card {
+        width: 29rem;
+        height: 37rem;
+
+        .vacancy {
+          font-size: 1.1rem;
+        }
+      }
+    }
+
+    .hero-container {
+      .hero {
+        .hero-details {
+          .search {
+            input {
+              padding-right: 0rem;
+            }
+          }
+        }
+
+        .hero-photo {
+          width: 38rem;
+          height: 36rem;
+        }
+      }
+    }
+
+    .featured-logos {
+      width: 10rem;
+    }
+
+    .discovery {
+      .discovery-photo {
+        width: 38rem;
+      }
+    }
+
+    .location-icon {
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+
+    .nft-container {
+      .nft {
+        h2 {
+          font-size: 3rem;
+        }
+      }
+    }
+
+    .place-to-stay--container {
+      .place-to-stay {
+        .category-bar {
+          .category-text {
+            font-size: 0.6rem;
+          }
+
+          .location-box {
+            padding: 0.25rem;
+
+            span {
+              font-size: 0.6rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Below 410px
+@media (max-width: 25.7em) {
+  .app-container {
+    .hero-container {
+      .hero {
+        .hero-details {
+          h1 {
+            font-size: 4.2rem;
+          }
+
+          .hero-description {
+            font-size: 2rem;
+          }
+
+          .search {
+            width: 18rem;
+
+            input {
+              padding-right: 0rem;
+            }
+
+            .search-button {
+              padding: 1.2rem 3.5rem;
+            }
+          }
+        }
+
+        .hero-photo {
+          width: 32rem;
+          height: 30rem;
+        }
+      }
+    }
+
+    .discovery-container {
+      .discovery {
+        .discovery-details {
+          .discovery-heading {
+            font-size: 3.6rem;
+          }
+
+          .discovery-text {
+            font-size: 1.3rem;
+          }
+        }
+
+        .discovery-photo {
+          width: 30rem;
+        }
+      }
+    }
+
+    .featured-logos {
+      width: 8rem;
+    }
+
+    #additional-info-col {
+      gap: 3rem;
+
+      .heading {
+        font-size: 1.4rem;
+      }
+
+      .link-text {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+//Below 340px
+@media (max-width: 21.3em) {
+  .app-container {
+    .place-to-stay--container {
+      .place-to-stay {
+        .category-bar {
+          .category-text {
+            font-size: 0.5rem;
+            font-weight: 700;
+          }
+
+          .location-box {
+            padding: 0 0.2rem;
+
+            span {
+              font-size: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+
+    .location-icon {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+}
+
+// //Below 710px
+// @media (max-width: 44.5em) {
+//   .footer {
+//     flex-direction: column;
+//     align-items: center;
+//     gap: 1.2rem;
+//   }
+
+//   .footer-item {
+//     align-self: flex-start;
+//   }
+
+//   .contact-container {
+//     width: 0;
+//     max-width: 100%;
+//   }
+// }
+
+// // Below 480px
+// @media (max-width: 30em) {
+//   .links-container {
+//     sub {
+//       font-size: 0.8rem;
+//     }
+//   }
+
+//   .profile-section {
+//     .share-icon {
+//       &.query {
+//         display: none;
+//       }
+
+//       &.query2 {
+//         display: flex;
+//         right: 10%;
+//       }
+//     }
+//   }
+
+//   .name-container {
+//     flex-direction: column;
+//   }
+// }
+
+// // Below 375px
+// @media (max-width: 23.5em) {
+//   .app-container {
+//     .contact-container {
+//       margin: 2.4rem auto 2.4rem auto;
+//       .header {
+//         span {
+//           font-size: 1.8rem;
+//           line-height: 2.8rem;
+//         }
+//       }
+//       .checkbox {
+//         .checkbox-label-text {
+//           line-height: 2.2rem;
+//           font-size: 1.5rem;
+//         }
+//       }
+//     }
+//   }
+
+//   .links-container {
+//     sub {
+//       font-size: 0.5rem;
+//       line-height: 1.4;
+//     }
+//   }
+
+//   .profile-section {
+//     .share-icon {
+//       &.query2 {
+//         display: flex;
+//         right: 5%;
+//       }
+//     }
+//   }
+// }

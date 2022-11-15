@@ -1,13 +1,7 @@
 .footer-meta-container {
-  height: 32.5rem;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 96%;
-  bottom: 0;
-  margin-top: 6.4rem;
+  height: auto;
+  padding-top: 6.2rem;
+  padding-bottom: 3.6rem;
   background-color: black;
   color: #fff;
 
@@ -34,6 +28,7 @@
         ion-icon {
           color: #fff;
           font-size: 1.8rem;
+          cursor: pointer;
         }
       }
     }

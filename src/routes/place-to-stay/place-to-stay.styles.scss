@@ -1,0 +1,35 @@
+.place-to-stay--container {
+  padding-bottom: 9.2rem;
+
+  .place-to-stay {
+    width: 85.7%;
+
+    .category-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .category-text {
+        font-size: 2rem;
+        color: #434343;
+        line-height: 2.5rem;
+      }
+
+      .location-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4rem;
+        padding: 1.2rem;
+        border: 0.1rem solid #b4b4b4;
+        border-radius: 0.8rem;
+        margin-right: 3rem;
+
+        span {
+          font-size: 2rem;
+          line-height: 2.5rem;
+        }
+      }
+    }
+  }
+}

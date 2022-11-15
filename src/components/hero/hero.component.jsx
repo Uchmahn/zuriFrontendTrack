@@ -1,8 +1,9 @@
 import './hero.styles.scss';
+import HeroImage from '../../assets/hero-group.png';
 
 const Hero = () => {
   return (
-    <div className="hero-container">
+    <div className="container hero-container">
       <div className="hero">
         <div className="hero-details">
           <h1>
@@ -19,11 +20,8 @@ const Hero = () => {
             <button className="btn search-button">Search</button>
           </div>
         </div>
-        <div className="hero-photos">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
+        <div className="hero-photos-container">
+          <img src={HeroImage} className="hero-photo" />
         </div>
       </div>
     </div>

@@ -1,0 +1,11 @@
+.featured-in-container {
+  background: linear-gradient(90deg, #a02279 11.45%, #a02279 11.45%);
+  margin-bottom: 2rem;
+
+  .featured-in {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

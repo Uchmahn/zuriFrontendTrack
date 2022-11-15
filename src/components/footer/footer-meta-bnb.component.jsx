@@ -3,21 +3,20 @@ import FooterDetails from '../../json-files/footer-details.json';
 import './footer-meta-bnb.styles.scss';
 import { Outlet } from 'react-router-dom';
 
-import { ReactComponent as MetaHouseIcon } from '../../assets/meta-house-icon.svg';
 import { ReactComponent as MetaLogo } from '../../assets/metabnb-logo.svg';
+import Navigation from '../navigation/navigation.component';
 
 const FooterMeta = () => {
   const copyright = String.fromCodePoint(0x00a9);
 
   return (
     <div className="app-container">
+      <Navigation />
       <Outlet />
-      <footer className="footer-meta-container">
+      <footer className="container footer-meta-container">
         <div className="footer-meta">
           <div className="footer-meta-item logo-col">
-            <div className="icon-logo-container">
-              <MetaHouseIcon /> <MetaLogo />
-            </div>
+            <MetaLogo />
 
             <div className="social-copyright--container">
               <div className="social-container">
@@ -29,7 +28,10 @@ const FooterMeta = () => {
               <span className="copyright"> {`${copyright} 2022 Metabnb`}</span>
             </div>
           </div>
-          <div className="footer-meta-item additional-info-col">
+          <div
+            className="footer-meta-item additional-info-col"
+            id="additional-info-col"
+          >
             {FooterDetails.map(
               ({
                 heading,

@@ -2,30 +2,62 @@ import './navigation.styles.scss';
 
 import { Link } from 'react-router-dom';
 
-import { ReactComponent as MetaHouseIcon } from '../../assets/meta-house-icon-gradient.svg';
 import { ReactComponent as MetaLogo } from '../../assets/metabnb-logo-gradient.svg';
+const removeHandler = () => {
+  if (document.querySelector('.header').classList.contains('nav-open')) {
+    document.querySelector('.header').classList.remove('nav-open');
+  }
+};
+
+export const toggleModalHandler = () => {
+  removeHandler();
+  document.querySelector('.overlay').classList.toggle('hidden');
+  document
+    .querySelector('.add-connect-wallet-window')
+    .classList.toggle('hidden');
+};
 
 const Navigation = () => {
+  const toggleHandler = () => {
+    document.querySelector('.header').classList.toggle('nav-open');
+  };
+
   return (
-    <div className="nav-container">
-      <nav className="nav">
+    <div className="container nav-container">
+      <header className="header nav-open">
         <Link to="/">
-          <div className="icon-logo-container">
-            <MetaHouseIcon /> <MetaLogo />
-          </div>
+          <MetaLogo />
         </Link>
 
-        <div className="nav-links">
-          <Link to="/" className="nav-link">
-            Home
-          </Link>
-          <Link className="nav-link">Place to stay</Link>
-          <span className="nav-link">NFTs</span>
-          <span className="nav-link">Community</span>
-        </div>
+        <nav className="nav">
+          <div className="nav-links">
+            <Link to="/" className="nav-link" onClick={removeHandler}>
+              Home
+            </Link>
+            <Link
+              to="place-to-stay"
+              className="nav-link"
+              onClick={removeHandler}
+            >
+              Place to stay
+            </Link>
+            <span className="nav-link" onClick={removeHandler}>
+              NFTs
+            </span>
+            <span className="nav-link" onClick={removeHandler}>
+              Community
+            </span>
+          </div>
 
-        <button className=" btn connect-wallet">Connect Wallet</button>
-      </nav>
+          <button className="btn connect-wallet" onClick={toggleModalHandler}>
+            Connect Wallet
+          </button>
+        </nav>
+        <button className="btn-mobile-nav" onClick={toggleHandler}>
+          <ion-icon name="menu-outline"></ion-icon>
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+      </header>
     </div>
   );
 };
