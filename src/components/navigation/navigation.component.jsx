@@ -24,7 +24,7 @@ const Navigation = () => {
 
   return (
     <div className="container nav-container">
-      <header className="header nav-open">
+      <header className="header ">
         <Link to="/">
           <MetaLogo />
         </Link>
