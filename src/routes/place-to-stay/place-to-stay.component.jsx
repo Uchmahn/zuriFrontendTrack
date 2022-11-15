@@ -2,10 +2,12 @@ import './place-to-stay.styles.scss';
 import { ReactComponent as LocationFilter } from '../../assets/location-filter-icon.svg';
 import { placetostayNftImages } from '../../components/nft-cards/nft-cards.component';
 import { ReactComponent as FiveStarIcon } from '../../assets/NFT/five-star-icon.svg';
+import ConnectWallet from '../../components/connect-wallet/connect-wallet.component';
 
 const PlaceToStay = () => {
   return (
     <div className="container place-to-stay--container">
+      <ConnectWallet />
       <div className="place-to-stay">
         <div className="category-bar">
           <span className="category-text">Restaurant</span>
