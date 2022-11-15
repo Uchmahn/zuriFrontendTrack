@@ -22,7 +22,7 @@ const ConnectWallet = () => {
             <ion-icon name="chevron-forward-outline"></ion-icon>
           </div>
           <div className="wallet-connect">
-            <img src={WalletConnect} alt="picture of wallet connect logo" />
+            <img src={WalletConnect} alt="wallet connect logo" />
             <ion-icon name="chevron-forward-outline"></ion-icon>
           </div>
         </div>

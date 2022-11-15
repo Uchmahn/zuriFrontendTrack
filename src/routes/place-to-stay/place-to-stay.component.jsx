@@ -25,7 +25,7 @@ const PlaceToStay = () => {
           {placetostayNftImages.map(img => {
             return (
               <div className="card" key={img}>
-                <img src={img} alt="metaverse nft photo" />
+                <img src={img} alt="metaverse nft " />
                 <div className="card-details-box">
                   <div className="section">
                     <p className="nft-name">Desert king</p>

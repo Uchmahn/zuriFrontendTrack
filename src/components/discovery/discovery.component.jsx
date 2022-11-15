@@ -16,7 +16,7 @@ const Discovery = () => {
         </div>
         <img
           src={DiscoveryPhoto}
-          alt="discovery photos of metaverse NFTs"
+          alt="discovery of metaverse NFTs"
           className="discovery-photo"
         />
       </div>
